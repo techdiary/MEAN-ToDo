@@ -1,0 +1,9 @@
+.selected {
+  background-color: aliceblue;
+  color: cadetblue;
+}
+
+.todos h2:hover {
+  color: cornflowerblue;
+  background-color: gainsboro;
+}

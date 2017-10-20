@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md">
+      <div *ngFor="let todo of todos; let i=index" >
+      <div class="todos card mt-3" (click)="onSelect(todo)" [class.selected]="todo == selectedTodo">
+        <h2 class="card-title">
+          <span class="badge badge-pill badge-secondary">{{i + 1}}</span>
+          {{todo.title}}
+        </h2>
+      </div>
+    </div>
+    </div>
+    <div class="col-md">
+      <div *ngIf="selectedTodo">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">{{selectedTodo.title}}</h4>
+            <p class="card-text text-muted">{{selectedTodo.description}}</p>
+          </div>
+          <button (click)="gotoDetail()" class="btn btn-dark">Details</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

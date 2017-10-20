@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+  <nav style="font-size: 24px;">
+    <div class="row">
+      <a routerLink="/" routerLinkActive="active" class="col-6 badge badge-dark">Home</a>
+      <a routerLink="todo/new" routerLinkActive="active" class="col-6 badge badge-dark">New Todo</a>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
